@@ -14,7 +14,7 @@ const action = type => store.dispatch({type})
 function render() {
   ReactDOM.render(
     <Counter
-      value={store.getState()}
+      value={store.getState().count}
       onIncrement={() => action('INCREMENT')}
       onDecrement={() => action('DECREMENT')} />,
     document.getElementById('root')
